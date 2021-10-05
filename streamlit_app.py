@@ -149,7 +149,6 @@ def main():
                 
     
     face_detect()
-    
-    
+        
 if __name__ == "__main__":
     main()
