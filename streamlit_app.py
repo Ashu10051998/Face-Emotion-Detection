@@ -23,7 +23,7 @@ except ImportError:
 # Loading pre-trained parameters for the cascade classifier
 try:
     faceCascade = cv2.CascadeClassifier(cv2.data.haarcascades + 'haarcascade_frontalface_default.xml') # Face Detection
-    model =load_model('Modelweight.h5')  #Load model
+    model =load_model('model.h5')  #Load model
     Classes = ['angry', 'disgust', 'fear', 'happy', 'neutral', 'sad', 'surprise'] # Emotion that will be predicted
 except Exception:
     st.write("Error loading cascade classifiers")
@@ -146,11 +146,7 @@ def main():
                 
                 4. Click on  Stop  to end.
                 
-                5. Still webcam window didnot open, then follow the following step in chrome:
-                   1) Navigate via address-bar to chrome://flags/#unsafely-treat-insecure-origin-as-secure in Chrome.
-                   2) Find and enable the Insecure origins treated as secure section.
-                   3) Add the streamlit web link addresses so to ignore the secure origin policy for. (Include the port number if required.)
-                   4) Save and restart Chrome and reload the link and enjoy your emotion.''')
+                
     
     face_detect()
     
